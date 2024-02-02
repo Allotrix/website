@@ -46,7 +46,6 @@ const ButtonRenderContent = () => {
                     Get started with <span className='text-allotrix-std'>Allotrix</span> today
                 </h1>
                 <p className='text-lg text[#D9D9D9]'>
-                    Sub text for 2 lines.
                 </p>
             </div>
             <div className='font-allotrix-font-secondary flex flex-col md:flex-row items-center gap-6 mt-12 md:mt-24 mx-auto'>
