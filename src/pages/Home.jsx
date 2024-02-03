@@ -299,7 +299,7 @@ const Home = () => {
                         Easy MUN-ing With Allotrix
                     </h2>
                     <aside className='flex flex-col md:flex-row font-allotrix-font-secondary text[#FFD4D4] gap-6 md:gap-2 z-20'>
-                        <div className='w-[300px] h-[230px] bg-[#ef3f3638] p-4 text-center rounded-xl text-allotrix-text'>
+                        <div className='w-[300px] h-[230px] bg-[#ef3f3638] p-4 text-center rounded-xl relative text-allotrix-text'>
                             <h3 className='text-xl mb-6 flex gap-2 items-center justify-center'>
                                 <IoCheckmarkDoneSharp />
                                 Smart Allotments
@@ -307,6 +307,9 @@ const Home = () => {
                             <p className='text-md px-4'>
                                 Allotrix uses a sophisticated algorithm to make accurate allotments, even for large MUNs with thousands of delegates.
                             </p>
+                            <a className='bg-allotrix-std py-2 px-6 rounded-lg absolute md:-bottom-14 -bottom-[570px] md:left-0 left-20 font-allotrix-font-secondary text-[white] md:text-xl' href="/getallotrix">
+                                Get Allotrix
+                            </a>
                         </div>
                         <div className='w-[300px] h-[230px] bg-[#ef3f363f] p-4 text-center rounded-xl text-allotrix-text'>
                             <h3 className='text-xl mb-6 flex gap-2 items-center justify-center'>
@@ -327,7 +330,6 @@ const Home = () => {
                             </p>
                         </div>
                     </aside>
-                    <a className='bg-allotrix-std py-2 px-6 rounded-lg font-allotrix-font-secondary text-[white] md:text-xl md:self-start md:mx-24' href="/getallotrix">Get Allotrix</a>
                 </motion.div>
             </section>
             <motion.section id='testimonials' {...animations.up} transition={{ delay: 0.6 }} className='relative mb-24'>

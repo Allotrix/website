@@ -92,11 +92,11 @@ export const FAQS = [
 ];
 
 export const UPDATES =  [
-  {
-    "date": "2024-02-14",
-    "title": "AI-Powered Committee Allotment",
-    "body": "Introducing cutting-edge AI integration! Simply provide the agenda and committee size, and our advanced algorithm will craft a meticulously curated list of countries, complete with a pertinency split. Experience the power of intelligent committee composition effortlessly."
-  },
+  // {
+  //   "date": "2024-02-14",
+  //   "title": "AI-Powered Committee Allotment",
+  //   "body": "Introducing cutting-edge AI integration! Simply provide the agenda and committee size, and our advanced algorithm will craft a meticulously curated list of countries, complete with a pertinency split. Experience the power of intelligent committee composition effortlessly."
+  // },
   {
     "date": "2024-02-15",
     "title": "Effortless Reallotment",

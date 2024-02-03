@@ -63,9 +63,19 @@ const AuthState = ({children}) => {
         try {
             const result = await signInWithEmailAndPassword(auth, newUser.email, newUser.password);
             if(result) {
-                console.log('logged');
+                setUser(result.user.uid)
             }
 
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    const handleSignOut = async () => {
+        try {
+            await auth.signOut();
+            setUser(null);
+            window.location.reload();
         } catch (error) {
             console.error(error);
         }
@@ -82,7 +92,7 @@ const AuthState = ({children}) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ user, handleGoogleSignup, createUser, setCreateUser, handleSignup, newUser, setNewUser, handleLogin }}>
+        <AuthContext.Provider value={{ user, handleGoogleSignup, handleSignOut, createUser, setCreateUser, handleSignup, newUser, setNewUser, handleLogin }}>
             {children}
         </AuthContext.Provider>
     )
