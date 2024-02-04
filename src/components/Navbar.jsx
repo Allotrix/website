@@ -44,7 +44,7 @@ const Navbar = ({openNav, setOpenNav}) => {
                 {
                     user ? (
                         <div className='text-allotrix-bg border-[1px] h-[50px] rounded-full w-[50px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
-                            <button onClick={handleSignOut}>
+                            <button onClick={handleSignOut} className='rounded-full h-full w-full flex items-center justify-center'>
                                 {
                                     user.photo ? (
                                         <img className='max-h-full max-w-full rounded-full' src={user.photo} alt="AV" />

@@ -21,26 +21,26 @@ const App = () => {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <AuthState>
-      <Router>
-        <MobileNavbar openNav={openNav} setOpenNav={setOpenNav} />
-        <Navbar openNav={openNav} setOpenNav={setOpenNav} />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/faqs' element={<Faqs />} />
-          <Route path='/getallotrix' element={<GetAllotrix />} />
-          <Route path='/getallotrix/download' element={<Download />} />
-          <Route path='/getallotrix/otherProducts' element={<OtherProducts />} />
-          <Route path='/updates' element={<Updates />} />
-          <Route path='/team' element={<Team />} />
-          <Route path='/getallotrix/download/payment' element={<Payment />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </AuthState>
+    <Router>
+      <AuthState>
+          <MobileNavbar openNav={openNav} setOpenNav={setOpenNav} />
+          <Navbar openNav={openNav} setOpenNav={setOpenNav} />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/faqs' element={<Faqs />} />
+            <Route path='/getallotrix' element={<GetAllotrix />} />
+            <Route path='/getallotrix/download' element={<Download />} />
+            <Route path='/getallotrix/otherProducts' element={<OtherProducts />} />
+            <Route path='/updates' element={<Updates />} />
+            <Route path='/team' element={<Team />} />
+            <Route path='/getallotrix/download/payment' element={<Payment />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+          </Routes>
+          <Footer />
+      </AuthState>
+    </Router>
   )
 }
 

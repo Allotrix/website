@@ -1,90 +1,143 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth, db } from '../lib/firebase';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { v4 as uuidv4 } from 'uuid';
 
 export const AuthContext = createContext();
 
 const AuthState = ({children}) => {
 
+    // Create or Login user with Google
+    // CURRENT USER
     const [user, setUser] = useState(null);
+
+    // New user with Manual Signup
     const [createUser, setCreateUser] = useState({ name: "", email: "", password: "" });
+
+    // New user with Manual Login
     const [newUser, setNewUser] = useState({ email: "", password: "" });
 
+    const navigate = useNavigate();
+
+    // Google Signup
     const handleGoogleSignup = async () => {
         const provider = new GoogleAuthProvider();
         try {
+
             const result = await signInWithPopup(auth, provider);
+
+            //Custom UID
             const customUID = result.user.uid;
             const customName = result.user.displayName.replace(' ', '');
             const UID = `${customName}-${customUID}`;
-            const photo = result.user.photoURL;
-            setUser({UID, photo});
+            setUser(UID);
 
+            // POST to email_list collection
             await setDoc(doc(db, 'email_list', UID), {
                 email: result.user.email
             });
 
+            // POST to user_data collection
             await setDoc(doc(db, 'user_data', UID), {
                 name: result.user.displayName,
                 email: result.user.email,
+                photo: result.user.photoURL,
                 createdAt: serverTimestamp()
             });
+
+            // Navigate page
+            navigate('/');
 
         } catch (error) {
             console.error(error);
         }
     }
 
+    // Google Login
     const handleGoogleLogin = async () => {
         const provider = new GoogleAuthProvider();
         try {
             const result = await signInWithPopup(auth, provider);
-            const UID = result.user.uid;
-            const photo = result.user.photoURL;
-            setUser({UID, photo});
+
+            // Custom UID
+            const customUID = result.user.uid;
+            const customName = result.user.displayName.replace(' ', '');
+            const UID = `${customName}-${customUID}`;
+            setUser(UID);
+
+            // Navigate page
+            navigate('/');
         } catch (error) {
             console.error(error);
         }
     };
 
+    // Manual Signup
     const handleSignup = async (event) => {
         event.preventDefault();
         try {
-            const randomUID = uuidv4();
-            const customUID = randomUID.replace(/-/g, '').substring(0, 28);
-            const customUIDName = createUser.name.replace(' ', '');
-            const UID = `${customUIDName}-${customUID}`;
+
+            const result = await createUserWithEmailAndPassword(auth, createUser.email, createUser.password);
+
+            // Updating account Name
+            const userName = result.user;
+            await updateProfile(userName, { displayName: createUser.name });
+
+            // Custom UID
+            const customUID = result.user.uid;
+            const customName = result.user.displayName.replace(' ', '');
+            const UID = `${customName}-${customUID}`;
             setUser(UID);
-       
-            await createUserWithEmailAndPassword(auth, createUser.email, createUser.password);
+
+            // POST to email_list collection
             await setDoc(doc(db, 'email_list', UID), {
                 email: createUser.email
-            })
+            });
+
+            // POST to user_data collection
             await setDoc(doc(db, 'user_data', UID), {
                 name: createUser.name,
                 email: createUser.email,
                 createdAt: serverTimestamp()
-            })
+            });
+
+            // Reset Signup Form 
+            setNewUser({ name: "", email: "", password: "" });
+
+            // Navigate Page
+            navigate('/');
+
         } catch (error) {
             console.error(error);
         }
         
     }
 
+    // Manual Login
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
             const result = await signInWithEmailAndPassword(auth, newUser.email, newUser.password);
-            if(result) {
-                setUser(result.user.uid)
-            }
+
+            // Custom UID
+            const customUID = result.user.uid;
+            const customName = result.user.displayName.replace(' ', '');
+            const UID = `${customName}-${customUID}`;
+            setUser(UID);
+
+            // Reset Login form
+            setNewUser({ email: "", password: "" });
+
+            // Navigate Page
+            navigate('/');
+
         } catch (error) {
             console.error(error);
         }
     }
 
+    // Signout function
     const handleSignOut = async () => {
         try {
             await auth.signOut();
@@ -103,7 +156,7 @@ const AuthState = ({children}) => {
             setUser(null);
           }
         })
-    }, [])
+    }, []);
 
     return (
         <AuthContext.Provider value={{ user, handleGoogleSignup, handleGoogleLogin, handleSignOut, createUser, setCreateUser, handleSignup, newUser, setNewUser, handleLogin }}>
