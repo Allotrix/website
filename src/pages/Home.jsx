@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { CLIENTS, FEATURES, USERS } from '../lib/constants';
 import { animate, motion } from 'framer-motion';
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
@@ -14,8 +14,13 @@ import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
 import TestimonialCard from '../components/TestimonialCard';
 import Popup from 'reactjs-popup';
+import { AuthContext } from '../contexts/AuthContext';
+import Alert from '../components/Alert';
 
 const Home = () => {
+
+    const context = useContext(AuthContext);
+    const { user } = context;
 
     const brandsCount = useRef(null);
 
@@ -400,9 +405,7 @@ const Home = () => {
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
                                     {
                                         (close) => (
-                                            <div>
-                                                
-                                            </div>
+                                            <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
                                         )
                                     }
                                 </Popup>
@@ -429,9 +432,21 @@ const Home = () => {
                                 </p>
                             </p>
                         </div>
-                        <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
-                            Get Allotrix
-                        </Link>
+                        {
+                            user ? (
+                                <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                    Get Allotrix
+                                </Link>
+                            ) : (
+                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
+                                    {
+                                        (close) => (
+                                            <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
+                                        )
+                                    }
+                                </Popup>
+                            )
+                        }
                     </motion.aside>
                     <motion.aside {...animations.up} className='h-[400px] w-[250px] bg-allotrix-bg rounded-xl font-allotrix-font p-4 text-lg flex flex-col gap-2 items-start border-2 border-solid border-allotrix-std'>
                         <div>
@@ -453,9 +468,21 @@ const Home = () => {
                                 </p>
                             </p>
                         </div>
-                        <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
-                            Get Allotrix
-                        </Link>
+                        {
+                            user ? (
+                                <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                    Get Allotrix
+                                </Link>
+                            ) : (
+                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
+                                    {
+                                        (close) => (
+                                            <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
+                                        )
+                                    }
+                                </Popup>
+                            )
+                        }
                     </motion.aside>
                     <motion.aside {...animations.up} className='h-[400px] w-[250px] bg-allotrix-bg rounded-xl font-allotrix-font p-4 text-lg flex flex-col gap-2 items-start border-2 border-solid border-allotrix-std'>
                         <div>
