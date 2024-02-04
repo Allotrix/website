@@ -43,8 +43,8 @@ const Navbar = ({openNav, setOpenNav}) => {
             <div className='flex flex-col md:flex-row gap-7 items-center'>
                 {
                     user ? (
-                        <div className='text-allotrix-bg rounded-full p-2 border-[1px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
-                            <button onClick={handleSignOut}>
+                        <div className='text-allotrix-bg rounded-full border-[1px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
+                            <button onClick={handleSignOut} className='rounded-[50%] p-2'>
                                 <FaUserAlt />
                             </button>
                         </div>
