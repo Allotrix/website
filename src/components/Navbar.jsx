@@ -44,11 +44,11 @@ const Navbar = ({openNav, setOpenNav}) => {
                     user ? (
                         <div className='text-allotrix-bg border-[1px] h-[50px] rounded-full w-[50px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
                             <Popup trigger={<button className='rounded-full h-full w-full flex items-center justify-center'>
-                                <img className='max-h-full max-w-full rounded-full' src={user ? user.photoURL : "https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"} alt="AV" />
+                                <img className='max-h-full max-w-full rounded-full' src={user.photoURL ? user.photoURL : "https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"} alt="AV" />
                             </button>}>
                                 {
                                     (close) => (
-                                        <aside className='rounded-md bg-[#161616] text-allotrix-text border border-solid border-allotrix-std flex flex-col items-center p-2 gap-2'>
+                                        <aside className='rounded-md bg-[#161616] w-[100px] text-allotrix-text border border-solid border-allotrix-std flex flex-col items-center p-2 gap-2'>
                                             <p className='font-allotrix-font-secondary'>
                                                 {user.displayName.split(' ')[0]}
                                             </p>

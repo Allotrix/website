@@ -26,6 +26,7 @@ const AuthState = ({children}) => {
         try {
 
             const result = await signInWithPopup(auth, provider);
+            setUser(result);
 
             // POST to email_list collection
             await setDoc(doc(db, 'email_list', user.uid), {
@@ -67,6 +68,7 @@ const AuthState = ({children}) => {
         try {
 
             const result = await createUserWithEmailAndPassword(auth, createUser.email, createUser.password);
+            setUser(result);
 
             // Updating account Name
             const userName = result.user;
