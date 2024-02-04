@@ -27,19 +27,13 @@ const AuthState = ({children}) => {
 
             const result = await signInWithPopup(auth, provider);
 
-            //Custom UID
-            const customUID = result.user.uid;
-            const customName = result.user.displayName.replace(' ', '');
-            const UID = `${customName}-${customUID}`;
-            setUser(UID);
-
             // POST to email_list collection
-            await setDoc(doc(db, 'email_list', UID), {
+            await setDoc(doc(db, 'email_list', user.uid), {
                 email: result.user.email
             });
 
             // POST to user_data collection
-            await setDoc(doc(db, 'user_data', UID), {
+            await setDoc(doc(db, 'user_data', user.uid), {
                 name: result.user.displayName,
                 email: result.user.email,
                 photo: result.user.photoURL,
@@ -58,13 +52,7 @@ const AuthState = ({children}) => {
     const handleGoogleLogin = async () => {
         const provider = new GoogleAuthProvider();
         try {
-            const result = await signInWithPopup(auth, provider);
-
-            // Custom UID
-            const customUID = result.user.uid;
-            const customName = result.user.displayName.replace(' ', '');
-            const UID = `${customName}-${customUID}`;
-            setUser(UID);
+            await signInWithPopup(auth, provider);
 
             // Navigate page
             navigate('/');
@@ -84,19 +72,14 @@ const AuthState = ({children}) => {
             const userName = result.user;
             await updateProfile(userName, { displayName: createUser.name });
 
-            // Custom UID
-            const customUID = result.user.uid;
-            const customName = result.user.displayName.replace(' ', '');
-            const UID = `${customName}-${customUID}`;
-            setUser(UID);
 
             // POST to email_list collection
-            await setDoc(doc(db, 'email_list', UID), {
+            await setDoc(doc(db, 'email_list', user.uid), {
                 email: createUser.email
             });
 
             // POST to user_data collection
-            await setDoc(doc(db, 'user_data', UID), {
+            await setDoc(doc(db, 'user_data', user.uid), {
                 name: createUser.name,
                 email: createUser.email,
                 createdAt: serverTimestamp()
@@ -118,13 +101,7 @@ const AuthState = ({children}) => {
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
-            const result = await signInWithEmailAndPassword(auth, newUser.email, newUser.password);
-
-            // Custom UID
-            const customUID = result.user.uid;
-            const customName = result.user.displayName.replace(' ', '');
-            const UID = `${customName}-${customUID}`;
-            setUser(UID);
+            await signInWithEmailAndPassword(auth, newUser.email, newUser.password);
 
             // Reset Login form
             setNewUser({ email: "", password: "" });

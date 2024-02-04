@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import Logo from '../assets/logo.png';
-import { FaUserAlt } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
-import { signOut } from 'firebase/auth';
+import Popup from 'reactjs-popup';
 
 const Navbar = ({openNav, setOpenNav}) => {
 
@@ -12,7 +11,7 @@ const Navbar = ({openNav, setOpenNav}) => {
     const { user, handleSignOut } = context;
 
     return (
-        <nav className={`flex flex-col items-center justify-center gap-16 fixed md:absolute ${openNav ? 'top-0': 'top-[-150%]'} left-0 h-[100vh] w-full bg-[#161616] text-allotrix-text font-bold tracking-wide transition-all duration-500 ease-in-out md:flex-row md:justify-between md:p-4 md:h-[unset] md:top-0 md:gap-0 z-50`}>
+        <nav className={`flex flex-col items-center justify-center gap-16 fixed md:absolute ${openNav ? 'top-0': 'top-[-150%]'} left-0 h-[100vh] w-full bg-[#161616] text-allotrix-text font-bold tracking-wide transition-all duration-500 ease-in-out md:flex-row md:justify-between md:p-4 md:h-[unset] md:top-0 md:gap-0 z-50 md:px-10`}>
             <div className='md:hidden'>
                 <button className='text-4xl text-[white] absolute top-6 right-4' onClick={() => setOpenNav(!openNav)}>
                     <IoCloseSharp />
@@ -44,15 +43,25 @@ const Navbar = ({openNav, setOpenNav}) => {
                 {
                     user ? (
                         <div className='text-allotrix-bg border-[1px] h-[50px] rounded-full w-[50px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
-                            <button onClick={handleSignOut} className='rounded-full h-full w-full flex items-center justify-center'>
+                            <Popup trigger={<button className='rounded-full h-full w-full flex items-center justify-center'>
+                                <img className='max-h-full max-w-full rounded-full' src={user ? user.photoURL : "https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"} alt="AV" />
+                            </button>}>
                                 {
-                                    user.photo ? (
-                                        <img className='max-h-full max-w-full rounded-full' src={user.photo} alt="AV" />
-                                    ) : (
-                                        <FaUserAlt />
+                                    (close) => (
+                                        <aside className='rounded-md bg-[#161616] text-allotrix-text border border-solid border-allotrix-std flex flex-col items-center p-2 gap-2'>
+                                            <p className='font-allotrix-font-secondary'>
+                                                {user.displayName.split(' ')[0]}
+                                            </p>
+                                            {/* <button className='hover:bg-allotrix-std w-full'>
+                                                Dashboard
+                                            </button> */}
+                                            <button onClick={handleSignOut} className='bg-allotrix-std hover:bg-[#161616] border-allotrix-std border transition-all delay-75 ease-out border-solid w-full text-[white] rounded-md py-[5px]'>
+                                                Log Out
+                                            </button>
+                                        </aside>
                                     )
                                 }
-                            </button>
+                            </Popup>
                         </div>
                     ) : (
                         <div className='bg-allotrix-std font-light py-2 px-8 rounded-lg font-allotrix-font-secondary text-[white] transition-all duration-300 ease-out hover:bg-[#161616] border-allotrix-std border-[1px] hover:border-solid hover:border-allotrix-std'>

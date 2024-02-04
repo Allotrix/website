@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from './components/Navbar';
 import MobileNavbar from './components/MobileNavbar';
 import Home from './pages/Home';
@@ -14,11 +14,14 @@ import Payment from './pages/Payment';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import AuthState from './contexts/AuthContext';
+import AuthState, { AuthContext } from './contexts/AuthContext';
 
 const App = () => {
 
   const [openNav, setOpenNav] = useState(false);
+
+  const context = useContext(AuthContext);
+  const { user } = context;
 
   return (
     <Router>
