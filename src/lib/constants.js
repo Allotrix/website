@@ -168,59 +168,46 @@ export const PACKAGES = [
   "Auto Data Visualisation"
 ]
 
-export const USERS = [
-  {
-    name: "Athiya",
-    school:"St. Xavier's MUN Club",
-    message:
-"Allotrix saved us countless hours managing delegates and committees. The streamlined registration and debate platform took the stress out of organizing, allowing us to focus on delivering a top-notch MUN experience."  },
-  {
-    name: 'Rohan',
-    school:"National Law School MUN Society",
 
-    message:
-    "Allotrix's automated research tools empowered our delegates to dive deeper into topics. The collaborative note-taking features fostered teamwork and made resolutions stronger."  },
+export const USERS =  [
   {
-    name: 'Evelyn',
-    school:"Global Indian MUN",
-
-    message:
-    "Allotrix facilitated seamless communication between chairs and delegates. The real-time voting system ensured transparency and kept everyone engaged throughout the debates."  },
+    "name": "Sarah R",
+    "designation": "MUN Fan",
+    "message": "Allotrix made my Model United Nations journey so much smoother! It's like having a helpful friend who knows exactly where you fit. The app's magic algorithm just gets me and my skills. Can't imagine doing MUN without it now!"
+  },
   {
-    name: 'David',
-    school:"Yale Model United Nations",
-
-    message:
-    "Allotrix helped us break down language barriers with its built-in translation feature. It fostered inclusivity and allowed delegates from diverse backgrounds to participate actively."
-    },
+    "name": "Michael S",
+    "designation": "MUN Explorer",
+    "message": "Allotrix surprised me in the best way during Model UN. It's like having a cool buddy who helps you out. The app's smart tricks not only made things easier but also fairer. It made my MUN experience way better!"
+  },
   {
-    name: 'Maria',
-    school:"ILMUNC Vietnam",
-
-    message:
-    "Allotrix's intuitive interface made learning parliamentary procedure a breeze for new delegates. Their engagement soared with the gamified elements and progress tracking."
-    },
+    "name": "Emily M",
+    "designation": "MUN Fan",
+    "message": "Allotrix is a must for MUN fans! It's like having a buddy who knows everyone's strengths. The app's special tricks make sure everyone gets a fair shot. Big thumbs up!"
+  },
   {
-    name: 'Oliver',
-    school:"Harvard Model United Nations",
-
-    message:
-    "Allotrix streamlined our award selection process with its data-driven analysis and customizable criteria. It ensured fairness and eliminated subjectivity in recognizing outstanding delegates."
-    },
+    "name": "James L",
+    "designation": "New MUN Fan",
+    "message": "Allotrix is a game-changer for Model United Nations. It's like having a friendly guide in the MUN world. The app's cool moves made my first-time experience so much better. It's like having a friend who just gets you!"
+  },
   {
-    name: 'Isabelle ',
-    school:"Oxford Union MUN",
-
-    message:
-    "Allotrix's feedback system fostered constructive criticism and helped delegates improve their public speaking and research skills. The platform created a supportive learning environment."
-    },
+    "name": "Rachel M",
+    "designation": "Event Organizer",
+    "message": "Allotrix was our reliable teammate during registration chaos, like a friend who has your back. The app's streamlined approach freed us to focus on creating an enjoyable event. Allotrix truly made our registration stress-free!"
+  },
   {
-    name: 'Liam',
-    school:"University of Chicago MUN Club",
-
-    message:
-    "Allotrix connected us with a global network of MUN enthusiasts. We collaborated on joint projects and shared best practices, enriching our MUN experience beyond our local chapter."
-    },
-  
-  
-];
+    "name": "Jason H",
+    "designation": "Event Coordinator",
+    "message": "Allotrix, our secret weapon for smooth registration! Like a buddy stepping in when things get crazy. The app's user-friendly design simplified the process, making it feel like a collaborative effort. Allotrix made our organizing journey enjoyable."
+  },
+  {
+    "name": "Maria G",
+    "designation": "Committee Organizer",
+    "message": "Allotrix brought order to our registration madness, like that friend who keeps things in check. The app's simplicity and automation not only saved time but brought a smile to our faces. Allotrix made organizing more humane and enjoyable."
+  },
+  {
+    "name": "Carlos S",
+    "designation": "Event Manager",
+    "message": "Allotrix, our event's unsung hero during registration. Like a wise mentor guiding through chaos. The app's seamless integration added a touch of humanity, making the process efficient and surprisingly enjoyable. Allotrix became the heart of our team!"
+  }
+]

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestimonialCard = ({name, message, img, school}) => {
+const TestimonialCard = ({name, message, img, designation}) => {
   return (
     <div className='bg-[#252526] text-allotrix-text w-[480px] font-allotrix-font-secondary px-8 py-4 rounded-md border border-solid border-allotrix-std'>
         <div className='flex gap-2 items-center'>
@@ -12,7 +12,7 @@ const TestimonialCard = ({name, message, img, school}) => {
                     {name}
                 </h3>
                 <h5 className='text-[gray] text-sm'>
-                    {school}
+                    {designation}
                 </h5>
             </div>
         </div>

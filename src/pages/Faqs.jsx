@@ -23,19 +23,19 @@ export default Faqs;
 
 const Accordion = ({title, content}) => {
     
-    const [openNav, setOpenNav] = useState(false);
+    const [openAccordion, setOpenAccordion] = useState(false);
 
     return (
-        <div className='w-full bg-allotrix-bg rounded-2xl border-[1px] border-solid border-allotrix-std p-4'>
+        <div className='w-full bg-allotrix-bg hover:cursor-pointer rounded-2xl border-[1px] border-solid border-allotrix-std p-4' onClick={() => setOpenAccordion(!openAccordion)}>
             <div className='flex justify-between items-center'>
                 <h3 className='font-allotrix-font-secondary text-lg'>
                     {title}
                 </h3>
-                <button className={`text-allotrix-std text-xl transition-all duration-300 ease-out ${openNav ? 'rotate-180' : ''}`} onClick={() => setOpenNav(!openNav)}>
+                <button className={`text-allotrix-std text-xl transition-all duration-300 ease-out ${openAccordion ? 'rotate-180' : ''}`}>
                     <FaChevronCircleDown />
                 </button>
             </div>
-            <p className={`pt-3 text-lg ${openNav ? 'block' : 'hidden'} text-[gray]`}>
+            <p className={`pt-3 text-lg ${openAccordion ? 'block' : 'hidden'} text-[gray]`}>
                 {content}
             </p>
         </div>

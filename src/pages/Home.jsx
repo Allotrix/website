@@ -80,7 +80,7 @@ const Home = () => {
     const TextGradientStyle = {
         '--bg-size': '400%',
         '--color-one': '#ffffff',
-        '--color-two': '#fcffd8',
+        '--color-two': '#F5F5F5',
         '--color-three': '#ffffff',
 
         fontSize: '1.5em',
@@ -355,7 +355,7 @@ const Home = () => {
                             }>
                                 {
                                     USERS.map((testimonial, index) => (
-                                        <TestimonialCard key={index} name={testimonial.name}school={testimonial.school}  message={testimonial.message} img={'data:https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'} />
+                                        <TestimonialCard key={index} name={testimonial.name} designation={testimonial.designation}  message={testimonial.message} img={'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'} />
                                     ))
                                 }
                         </div>
