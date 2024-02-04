@@ -19,20 +19,35 @@ const AuthState = ({children}) => {
             const customUID = result.user.uid;
             const customName = result.user.displayName.replace(' ', '');
             const UID = `${customName}-${customUID}`;
-            setUser(UID);
+            const photo = result.user.photoURL;
+            setUser({UID, photo});
 
             await setDoc(doc(db, 'email_list', UID), {
                 email: result.user.email
             });
+
             await setDoc(doc(db, 'user_data', UID), {
                 name: result.user.displayName,
                 email: result.user.email,
                 createdAt: serverTimestamp()
             });
+
         } catch (error) {
             console.error(error);
         }
     }
+
+    const handleGoogleLogin = async () => {
+        const provider = new GoogleAuthProvider();
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const UID = result.user.uid;
+            const photo = result.user.photoURL;
+            setUser({UID, photo});
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     const handleSignup = async (event) => {
         event.preventDefault();
@@ -65,7 +80,6 @@ const AuthState = ({children}) => {
             if(result) {
                 setUser(result.user.uid)
             }
-
         } catch (error) {
             console.error(error);
         }
@@ -92,7 +106,7 @@ const AuthState = ({children}) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ user, handleGoogleSignup, handleSignOut, createUser, setCreateUser, handleSignup, newUser, setNewUser, handleLogin }}>
+        <AuthContext.Provider value={{ user, handleGoogleSignup, handleGoogleLogin, handleSignOut, createUser, setCreateUser, handleSignup, newUser, setNewUser, handleLogin }}>
             {children}
         </AuthContext.Provider>
     )

@@ -43,9 +43,15 @@ const Navbar = ({openNav, setOpenNav}) => {
             <div className='flex flex-col md:flex-row gap-7 items-center'>
                 {
                     user ? (
-                        <div className='text-allotrix-bg rounded-full border-[1px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
-                            <button onClick={handleSignOut} className='rounded-[50%] p-2'>
-                                <FaUserAlt />
+                        <div className='text-allotrix-bg border-[1px] h-[50px] rounded-full w-[50px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
+                            <button onClick={handleSignOut}>
+                                {
+                                    user.photo ? (
+                                        <img className='max-h-full max-w-full rounded-full' src={user.photo} alt="AV" />
+                                    ) : (
+                                        <FaUserAlt />
+                                    )
+                                }
                             </button>
                         </div>
                     ) : (

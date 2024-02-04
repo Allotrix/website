@@ -7,7 +7,7 @@ import { AuthContext } from '../contexts/AuthContext';
 const Login = () => {
 
     const context = useContext(AuthContext);
-    const { handleLogin, newUser, setNewUser } = context;
+    const { handleLogin, newUser, setNewUser, handleGoogleLogin } = context;
 
     return (
         <main className='bg-allotrix-bg md:h-[100vh] flex flex-col md:flex-row items-center md:justify-center w-full text-allotrix-text relative overflow-hidden'>
@@ -33,7 +33,7 @@ const Login = () => {
                         Log in to your account
                     </h3>
                     <aside className='p-4 rounded-md border-2 border-[#252526] flex flex-col gap-10 items-center'>
-                        <button className='flex items-center gap-2 justify-center font-allotrix-font-secondary bg-[#2392F7] text-[white] rounded-md w-[300px'>
+                        <button onClick={handleGoogleLogin} className='flex items-center gap-2 justify-center font-allotrix-font-secondary bg-[#2392F7] text-[white] rounded-md'>
                             <img className='h-[40px] w-[40px] bg-[white] p-2 rounded-s-md' src={Google} alt="G" />
                             <p className='pr-4 py-2'>
                                 Continue with Google

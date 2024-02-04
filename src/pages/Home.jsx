@@ -13,6 +13,7 @@ import Accordion from '../components/Accordion';
 import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
 import TestimonialCard from '../components/TestimonialCard';
+import Popup from 'reactjs-popup';
 
 const Home = () => {
 
@@ -390,9 +391,23 @@ const Home = () => {
                                 </p>
                             </p>
                         </div>
-                        <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
-                            Get Allotrix
-                        </Link>
+                        {
+                            user ? (
+                                <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                    Get Allotrix
+                                </Link>
+                            ) : (
+                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
+                                    {
+                                        (close) => (
+                                            <div>
+                                                
+                                            </div>
+                                        )
+                                    }
+                                </Popup>
+                            )
+                        }
                     </motion.aside>
                     <motion.aside {...animations.up} className='h-[400px] w-[250px] bg-allotrix-bg rounded-xl font-allotrix-font p-4 text-lg flex flex-col gap-2 items-start border-2 border-solid border-allotrix-std'>
                         <div>
