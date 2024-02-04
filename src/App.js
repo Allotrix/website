@@ -20,9 +20,6 @@ const App = () => {
 
   const [openNav, setOpenNav] = useState(false);
 
-  const context = useContext(AuthContext);
-  const { user } = context;
-
   return (
     <Router>
       <AuthState>
