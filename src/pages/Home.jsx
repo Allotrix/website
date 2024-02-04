@@ -153,7 +153,7 @@ const Home = () => {
                         </motion.article>
                         <motion.article {...animations.right} transition={{ delay: 0.3}} className='w-[290px] h-[80px] grid items-center text-center bg-allotrix-bg rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
                             <h5 style={{ ...TextGradientStyle, ...GradientAnimations.right.animate }}>
-                                500 allotments in 25 minutes
+                                1000+ delegates alloted
                             </h5>
                         </motion.article>
                         <motion.article {...animations.right} transition={{ delay: 0.4}}>
@@ -198,7 +198,7 @@ const Home = () => {
                     </h2>
                 </div>
                 <div className='w-full flex flex-col items-center md:flex-row gap-6 mt-10 md:justify-center md:gap-10 z-10'>
-                    <motion.aside {...animations.left} className={`h-[500px] relative w-[300px] bg-allotrix-bg rounded-xl custom-cursor1 font-allotrix-font p-4 text-lg flex flex-col gap-2 items-center justify-between`}>
+                    <motion.aside {...animations.left} className={`h-[500px] relative w-[300px] md:w-[350px] bg-allotrix-bg rounded-xl custom-cursor1 font-allotrix-font p-4 text-lg flex flex-col gap-2 items-center justify-between`}>
                         <h3 className='font-extralight text-md'>
                             Without Allotrix
                         </h3>
@@ -237,7 +237,7 @@ const Home = () => {
                             </div>
                         </aside>
                     </motion.aside>
-                    <motion.aside {...animations.right} className={`h-[500px] w-[300px] bg-[#252526] custom-cursor2 rounded-xl font-allotrix-font p-4 justify-between text-lg border-[1px] border-solid border-allotrix-std flex flex-col gap-2 items-center`}>
+                    <motion.aside {...animations.right} className={`h-[500px] w-[300px] md:w-[350px] bg-[#252526] custom-cursor2 rounded-xl font-allotrix-font p-4 justify-between text-lg border-[1px] border-solid border-allotrix-std flex flex-col gap-2 items-center`}>
                         <h3 className='font-extralight text-md'>
                             With Allotrix
                         </h3>
