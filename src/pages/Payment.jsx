@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Payment = () => {
   return (
-    <main className='bg-allotrix-bg text-allotrix-text relative overflow-hidden'>
-        <section className='w-[95%] mx-auto flex flex-col justify-center md:flex-row items-center md:gap-20 py-24 mt-16 md:mt-0 text-center gap-10 md:items-start md:text-left md:px-32 md:pt-48 pb-12 border-b border-solid border-allotrix-text'>
+    <main className='bg-[black] text-allotrix-text relative overflow-hidden'>
+        {/* <section className='w-[95%] mx-auto flex flex-col justify-center md:flex-row items-center md:gap-20 py-24 mt-16 md:mt-0 text-center gap-10 md:items-start md:text-left md:px-32 md:pt-48 pb-12 border-b border-solid border-allotrix-text'>
             <div className='flex flex-col gap-4 py-3 px-6'>
                 <h1 className='text-6xl text-left md:text-7xl font-allotrix-font-secondary font-semibold pr-10 md:border-r-[1px] md:border-allotrix-text md:border-solid'>
                     One Step Away
@@ -60,7 +60,15 @@ const Payment = () => {
                     Meet the team.
                 </h2>
             </Link>
-        </section>
+        </section> */}
+        <div className='h-[100vh] flex flex-col justify-center items-center'>
+            <div className='h-[200px] w-[300px] my-auto mx-0'>
+                <img className='max-h-[100%] max-w-[100%] my-auto mx-0'  src="https://i.pinimg.com/originals/64/92/c5/6492c545bd4fa426d18f3de822ff444d.gif" />
+            </div>
+            <div>
+                <img  src="https://media.tenor.com/kbbJOE4dIJkAAAAM/working-on.gif" />
+            </div>
+        </div>
     </main>
   )
 }
