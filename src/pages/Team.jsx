@@ -56,7 +56,7 @@ const Team = () => {
 
     return (
         <main className='bg-allotrix-bg text-allotrix-text relative overflow-hidden'>
-            <section className='font-allotrix-font-secondary flex flex-col items-center py-24 mt-16 md:mt-0 text-center gap-10 md:items-start md:text-left md:px-32 md:gap-4 md:pt-48 w-full'>
+            {/* <section className='font-allotrix-font-secondary flex flex-col items-center py-24 mt-16 md:mt-0 text-center gap-10 md:items-start md:text-left md:px-32 md:gap-4 md:pt-48 w-full'>
                 <h1 className='font-bold mb-10 text-3xl md:text-5xl text-center w-full'>
                     Meet the Team
                 </h1>
@@ -93,7 +93,15 @@ const Team = () => {
                         ))
                     }
                 </div>
-            </motion.section>
+            </motion.section> */}
+            <div className='h-[100vh] flex flex-col justify-center items-center'>
+                <div className='h-[200px] w-[300px] my-auto mx-0'>
+                    <img className='max-h-[100%] max-w-[100%] my-auto mx-0'  src="https://i.pinimg.com/originals/64/92/c5/6492c545bd4fa426d18f3de822ff444d.gif" />
+                </div>
+                <div>
+                    <img  src="https://media.tenor.com/kbbJOE4dIJkAAAAM/working-on.gif" />
+                </div>
+            </div>
         </main>
     )
 }
