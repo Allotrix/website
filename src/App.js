@@ -14,11 +14,13 @@ import Payment from './pages/Payment';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import AuthState, { AuthContext } from './contexts/AuthContext';
+import AuthState from './contexts/AuthContext';
 
 const App = () => {
 
   const [openNav, setOpenNav] = useState(false);
+
+  const [selectedPlan, setSelectedPlan] = useState("");
 
   return (
     <Router>
@@ -26,14 +28,14 @@ const App = () => {
           <MobileNavbar openNav={openNav} setOpenNav={setOpenNav} />
           <Navbar openNav={openNav} setOpenNav={setOpenNav} />
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home setSelectedPlan={setSelectedPlan} />} />
             <Route path='/faqs' element={<Faqs />} />
             <Route path='/getallotrix' element={<GetAllotrix />} />
             <Route path='/getallotrix/download' element={<Download />} />
             <Route path='/getallotrix/otherProducts' element={<OtherProducts />} />
             <Route path='/updates' element={<Updates />} />
             <Route path='/team' element={<Team />} />
-            <Route path='/getallotrix/download/payment' element={<Payment />} />
+            <Route path='/getallotrix/download/payment' element={<Payment initialSelectedPlan={selectedPlan} onPlanChange={setSelectedPlan} />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />

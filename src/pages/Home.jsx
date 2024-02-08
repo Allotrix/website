@@ -17,7 +17,7 @@ import Popup from 'reactjs-popup';
 import { AuthContext } from '../contexts/AuthContext';
 import Alert from '../components/Alert';
 
-const Home = () => {
+const Home = ({ setSelectedPlan }) => {
 
     const context = useContext(AuthContext);
     const { user } = context;
@@ -398,7 +398,7 @@ const Home = () => {
                         </div>
                         {
                             user ? (
-                                <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                <Link onClick={() => setSelectedPlan("Free")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
                                     Get Allotrix
                                 </Link>
                             ) : (
@@ -434,7 +434,7 @@ const Home = () => {
                         </div>
                         {
                             user ? (
-                                <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                <Link onClick={() => setSelectedPlan("Starter")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
                                     Get Allotrix
                                 </Link>
                             ) : (
@@ -470,7 +470,7 @@ const Home = () => {
                         </div>
                         {
                             user ? (
-                                <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                <Link onClick={() => setSelectedPlan("Premium")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
                                     Get Allotrix
                                 </Link>
                             ) : (

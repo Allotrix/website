@@ -157,16 +157,16 @@ export const TEAM = [
   }
 ]
 
-export const PACKAGES = [
-  "Smart Allotments",
-  "Automatic Data Sorting",
-  "Automatic Email",
-  "Custom Email Design",
-  "Allotment Verification",
-  "Pertinence Matrix",
-  "One click re-allotment",
-  "Auto Data Visualisation"
-]
+export const PLAN_FEATURES = [
+  {name: "Smart Allotments", plans: ["Free", "Starter", "Premium", "Lifetime"]},
+  {name: "Custom Email Design", plans: ["Premium", "Lifetime"]},
+  {name: "Automatic Data Sorting", plans: ["Starter", "Premium", "Lifetime"]},
+  {name: "Automatic Email", plans: ["Starter", "Premium", "Lifetime"]},
+  {name: "Auto Data Visualisation", plans: ["Premium", "Lifetime"]},
+  {name: "Allotment Verification", plans: ["Starter", "Premium", "Lifetime"]},
+  {name: "Pertinence Matrix", plans: ["Starter", "Premium", "Lifetime"]},
+  {name: "One click re-allotment", plans: ["Starter", "Premium", "Lifetime"]}
+];
 
 
 export const USERS =  [
