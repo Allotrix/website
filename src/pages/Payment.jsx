@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { PLAN_FEATURES } from '../lib/constants';
 import { Link } from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import Alert from '../components/Alert';
 
 const Payment = ({ initialSelectedPlan, onPlanChange }) => {
 
@@ -27,7 +29,11 @@ const Payment = ({ initialSelectedPlan, onPlanChange }) => {
           default:
             return "Price not available";
         }
-      };
+    };
+
+    const checkoutPayment = () => {
+
+    }
 
     return (
         <main className='bg-[black] text-allotrix-text relative overflow-hidden'>
@@ -44,9 +50,16 @@ const Payment = ({ initialSelectedPlan, onPlanChange }) => {
                     <p className='text-xl font-allotrix-font-secondary'>
                         INR {getPriceForPlan()}/-
                     </p>
-                    <button className='bg-allotrix-std font-allotrix-font-secondary px-12 py-2 rounded-md'>
+                    {/* <button className='bg-allotrix-std font-allotrix-font-secondary px-12 py-2 rounded-md'>
                         Pay
-                    </button>
+                    </button> */}
+                    <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std font-allotrix-font-secondary px-12 py-2 rounded-md'>Pay</button>} modal nested>
+                        {
+                            (close) => (
+                                <Alert message={"The payment gateway is under construction. Contact us to get Allotrix."} onclick = {() => close()} />
+                            )
+                        }
+                    </Popup>
                 </aside>
             </section>
             <section className='text-xl font-allotrix-font-secondary flex md:flex-row flex-col gap-2 md:gap-10 items-center w-[90%] mx-auto justify-center my-6'>

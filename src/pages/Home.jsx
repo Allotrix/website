@@ -504,9 +504,9 @@ const Home = ({ setSelectedPlan }) => {
                                 </p>
                             </p>
                         </div>
-                        <Link className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                        <a href='mailto:allotrixapp@gmail.com' className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>
                             Contact
-                        </Link>
+                        </a>
                     </motion.aside>
                 </div>
                 <div className='md:self-end'>
