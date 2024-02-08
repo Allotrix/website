@@ -121,6 +121,7 @@ const AuthState = ({children}) => {
         try {
             await auth.signOut();
             setUser(null);
+            navigate('/');
             window.location.reload();
         } catch (error) {
             console.error(error);

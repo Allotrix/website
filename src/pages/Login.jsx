@@ -19,12 +19,12 @@ const Login = () => {
                     <p className='md:w-[330px] px-4 md:px-[unset]'>
                         Allotrix simplifies your allotments, emails, re-allotments, and more! A click of a button is all it takes
                     </p>
-                    <button className='flex gap-2 w-[190px] items-center font-bold text-[white] justify-center bg-allotrix-std rounded-md py-2 px-4 mx-auto md:mx-[unset]'>
+                    <a href='https://www.youtube.com/@Allotrix' target='blank' className='flex gap-2 w-[190px] items-center font-bold text-[white] justify-center bg-allotrix-std rounded-md py-2 px-4 mx-auto md:mx-[unset]'>
                         Visualize Allotrix 
                         <p className='font-extrabold'>
                             <MdOutlineArrowOutward />
                         </p>
-                    </button>
+                    </a>
                 </article>
             </section>
             <section className='flex flex-col items-center mt-16 md:mt-0 text-center gap-10 md:items-start md:text-left md:pr-32 md:gap-4 md:pt-48 mb-24'>
