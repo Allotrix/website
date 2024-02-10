@@ -56,7 +56,7 @@ export const FAQS = [
     },
     {
       "question": "Can I have a trial version before I purchase it?",
-      "answer": "A free version of Allotrix is available at https://allotrix.com/#, Where you can avail the basic benefits of the software and test it out for yourself.",
+      "answer": "A free version of Allotrix is available at https://allotrix.com, Where you can avail the basic benefits of the software and test it out for yourself.",
       "collapse": "collapseSeven"
     },
     {

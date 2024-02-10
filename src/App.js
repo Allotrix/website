@@ -19,7 +19,7 @@ import AuthState from './contexts/AuthContext';
 const App = () => {
 
   const [openNav, setOpenNav] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState("Free");
 
   return (
     <Router>

@@ -152,19 +152,21 @@ const Home = ({ setSelectedPlan }) => {
                     </video>
                     </motion.div>
                     <div className='flex flex-col gap-2 mb-24'>
-                        <motion.article {...animations.right} transition={{ delay: 0.2}}  className='w-[290px] h-[80px] grid items-center text-center bg-allotrix-bg rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
+                        <motion.article {...animations.right} transition={{ delay: 0.2}}  className='w-[290px] h-[80px] text-sm md:text-lg grid items-center text-center bg-allotrix-bg rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
                             <h5 style={{ ...TextGradientStyle, ...GradientAnimations.right.animate }}>
                                 3 seconds per allotment
                             </h5>
                         </motion.article>
-                        <motion.article {...animations.right} transition={{ delay: 0.3}} className='w-[290px] h-[80px] grid items-center text-center bg-allotrix-bg rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
+                        <motion.article {...animations.right} transition={{ delay: 0.3}} className='w-[290px] h-[80px] text-sm md:text-lg grid items-center text-center bg-allotrix-bg rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
                             <h5 style={{ ...TextGradientStyle, ...GradientAnimations.right.animate }}>
                                 1000+ delegates alloted
                             </h5>
                         </motion.article>
                         <motion.article {...animations.right} transition={{ delay: 0.4}}>
-                            <Link to={'/team'} className='bg-allotrix-std py-2 px-6 rounded-lg font-allotrix-font-secondary font-bold text-[#161617] md:text-xl lg:h-[95px] text-center flex items-center justify-center'>
-                                About the team
+                            <Link to={'/team'} className='w-[290px] h-[80px] grid items-center text-md md:text-lg text-center bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
+                                <h5 style={{ ...TextGradientStyle, ...GradientAnimations.right.animate }}>
+                                    About the team
+                                </h5>
                             </Link>
                         </motion.article>
                     </div>
@@ -399,10 +401,10 @@ const Home = ({ setSelectedPlan }) => {
                         {
                             user ? (
                                 <Link onClick={() => setSelectedPlan("Free")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
-                                    Get Allotrix
+                                    View Details
                                 </Link>
                             ) : (
-                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
+                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
                                         (close) => (
                                             <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
@@ -435,10 +437,10 @@ const Home = ({ setSelectedPlan }) => {
                         {
                             user ? (
                                 <Link onClick={() => setSelectedPlan("Starter")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
-                                    Get Allotrix
+                                    View Details
                                 </Link>
                             ) : (
-                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
+                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
                                         (close) => (
                                             <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
@@ -471,10 +473,10 @@ const Home = ({ setSelectedPlan }) => {
                         {
                             user ? (
                                 <Link onClick={() => setSelectedPlan("Premium")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
-                                    Get Allotrix
+                                    View Details
                                 </Link>
                             ) : (
-                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>Get Allotrix</button>} modal nested>
+                                <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
                                         (close) => (
                                             <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />

@@ -83,7 +83,7 @@ const Payment = ({ initialSelectedPlan, onPlanChange }) => {
                 <article className='mt-6 flex md:flex-wrap justify-center gap-2 flex-col items-center md:h-[250px] md:w-[400px] mx-auto'>
                     {
                         PLAN_FEATURES.map((feature) => (
-                            <h2 className={`${feature.plans.includes(selectedPlan) ? 'bg-allotrix-std ' : 'bg-[#252526]'} px-4 h-[50px] leading-5 flex items-center justify-center text-center w-[200px] rounded-md font-allotrix-font-secondary text-lg text-[white]`}>
+                            <h2 className={`${feature.plans.includes(selectedPlan) ? 'bg-allotrix-std text-[white]' : 'bg-[#252526] text-[gray]'} px-4 h-[50px] leading-5 flex items-center justify-center text-center w-[200px] rounded-md font-allotrix-font-secondary text-lg`}>
                                 {feature.name}
                             </h2>
                         ))
