@@ -6,6 +6,8 @@ import clsx from 'clsx';
 import TestimonialCard from '../components/TestimonialCard';
 import { USERS } from '../lib/constants';
 import { AuthContext } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
+import LinkBox from '../components/LinkBox';
 
 
 const Download = () => {
@@ -119,7 +121,7 @@ const Download = () => {
                     </h2>
                 </div>
                 <div className='mt-10 w-full px-6'>
-                    <a title={'Automation Solutions'} description={'Get individual tools for cheaper rates.'} href = "/getallotrix/otherProducts" />
+                    <LinkBox title={'Automation Solutions'} description={'Get individual tools for cheaper rates.'} link="/getallotrix/otherProducts" />
                 </div>
             </section>
         </main>
