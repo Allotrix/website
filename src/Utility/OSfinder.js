@@ -1,5 +1,4 @@
 export const getDeviceType = () => {
-    
     const userAgent = navigator.userAgent.toLowerCase();
 
     if (/windows/.test(userAgent)) {
@@ -7,7 +6,11 @@ export const getDeviceType = () => {
     } else if (/linux/.test(userAgent)) {
         return 'Linux';
     } else if (/macintosh|mac os x/.test(userAgent)) {
-        return 'Mac';
+        if (/iphone|ipad|ipod/.test(userAgent)) {
+            return 'iOS';
+        } else {
+            return 'Mac';
+        }
     } else if (/android/.test(userAgent)) {
         return 'Android';
     } else {
