@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { FaWindows, FaApple } from "react-icons/fa";
-import LinkBox from '../components/LinkBox';
 import { getDeviceType } from '../Utility/OSfinder';  
-import { Link } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
 import TestimonialCard from '../components/TestimonialCard';
@@ -20,29 +18,29 @@ const Download = () => {
     const ButtonRenderContent = () => {
         if (deviceType === 'Windows') {
             return (
-                <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
+                <a href={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
                     <div className='absolute -top-[8px] -left-[8px] bg-[#2194ff] rounded-md font-allotrix-font-secondary text-[10px] px-[6px] py-0'>
                         BETA
                     </div>
                     Get For Windows
                     <FaWindows />
-                </Link>
+                </a>
             );
         } else if (deviceType === 'Mac') {
             return (
-                <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
+                <a href={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
                     <div className='absolute -top-[8px] -left-[8px] bg-[#2194ff] rounded-md font-allotrix-font-secondary text-[10px] px-[6px] py-0'>
                         BETA
                     </div>
                     Get For Mac
                     <FaApple />
-                </Link>
+                </a>
             );
         } else {
             return (
-                <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
+                <a href={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
                     Not available for this OS
-                </Link>
+                </a>
             );
         }
         
@@ -61,9 +59,9 @@ const Download = () => {
                         user ? (
                             ButtonRenderContent()
                         ) : (
-                            <Link to={'/login'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
+                            <a href={'/login'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
                                 Login to download
-                            </Link>
+                            </a>
                         )
                     }
                 
@@ -121,7 +119,7 @@ const Download = () => {
                     </h2>
                 </div>
                 <div className='mt-10 w-full px-6'>
-                    <LinkBox title={'Automation Solutions'} description={'Get individual tools for cheaper rates.'} link = "/getallotrix/otherProducts" />
+                    <a title={'Automation Solutions'} description={'Get individual tools for cheaper rates.'} href = "/getallotrix/otherProducts" />
                 </div>
             </section>
         </main>

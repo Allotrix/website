@@ -31,10 +31,6 @@ const Payment = ({ initialSelectedPlan, onPlanChange }) => {
         }
     };
 
-    const checkoutPayment = () => {
-
-    }
-
     return (
         <main className='bg-[black] text-allotrix-text relative overflow-hidden'>
             <section className='w-[95%] mx-auto flex flex-col justify-center md:flex-row items-center md:gap-20 py-24 mt-16 md:mt-0 text-center gap-10 md:items-start md:text-left md:px-32 md:pt-48 pb-12 border-b border-solid border-allotrix-text'>

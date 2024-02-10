@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef } from 'react';
 import { CLIENTS, FEATURES, USERS } from '../lib/constants';
 import { animate, motion } from 'framer-motion';
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
@@ -163,11 +163,11 @@ const Home = ({ setSelectedPlan }) => {
                             </h5>
                         </motion.article>
                         <motion.article {...animations.right} transition={{ delay: 0.4}}>
-                            <Link to={'/team'} className='w-[290px] h-[80px] grid items-center text-md md:text-lg text-center bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
+                            <a href={'/team'} className='w-[290px] h-[80px] grid items-center text-md md:text-lg text-center bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
                                 <h5 style={{ ...TextGradientStyle, ...GradientAnimations.right.animate }}>
                                     About the team
                                 </h5>
-                            </Link>
+                            </a>
                         </motion.article>
                     </div>
                 </aside>
@@ -239,10 +239,10 @@ const Home = ({ setSelectedPlan }) => {
                             </ul>
                         </article>
                         <aside className='w-full '>
-                            <div className='flex justify-between items-center border border-[#252526] text-[##252526] w-full rounded-lg p-3'>
+                            <a href='/getAllotrix/otherProducts' className='flex justify-between items-center border border-[#252526] text-[##252526] w-full rounded-lg p-3'>
                                 Join Discord
                                 <FaLongArrowAltRight />
-                            </div>
+                            </a>
                         </aside>
                     </motion.aside>
                     <motion.aside {...animations.right} className={`h-[500px] w-[300px] md:w-[350px] bg-[#252526] custom-cursor2 rounded-xl font-allotrix-font p-4 justify-between text-lg border-[1px] border-solid border-allotrix-std flex flex-col gap-2 items-center`}>
@@ -272,10 +272,10 @@ const Home = ({ setSelectedPlan }) => {
                             </ul>
                         </article>
                         <aside className='w-full '>
-                            <Link to={'/getallotrix'} className='flex justify-center gap-2 items-center border border-[#252526] text-[##252526] w-full rounded-lg p-3'>
+                            <a href={'/getallotrix'} className='flex justify-center gap-2 items-center border border-[#252526] text-[##252526] w-full rounded-lg p-3'>
                                 Get Allotrix
                                 <IoMdDownload />
-                            </Link>
+                            </a>
                         </aside>
                     </motion.aside>
                 </div>
@@ -400,9 +400,9 @@ const Home = ({ setSelectedPlan }) => {
                         </div>
                         {
                             user ? (
-                                <Link onClick={() => setSelectedPlan("Free")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                <a onClick={() => setSelectedPlan("Free")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' href={'/getAllotrix/download/payment'}>
                                     View Details
-                                </Link>
+                                </a>
                             ) : (
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
@@ -436,9 +436,9 @@ const Home = ({ setSelectedPlan }) => {
                         </div>
                         {
                             user ? (
-                                <Link onClick={() => setSelectedPlan("Starter")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                <a onClick={() => setSelectedPlan("Starter")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' href={'/getAllotrix/download/payment'}>
                                     View Details
-                                </Link>
+                                </a>
                             ) : (
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
@@ -472,9 +472,9 @@ const Home = ({ setSelectedPlan }) => {
                         </div>
                         {
                             user ? (
-                                <Link onClick={() => setSelectedPlan("Premium")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
+                                <a onClick={() => setSelectedPlan("Premium")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' href={'/getAllotrix/download/payment'}>
                                     View Details
-                                </Link>
+                                </a>
                             ) : (
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
