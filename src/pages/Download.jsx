@@ -18,29 +18,29 @@ const Download = () => {
     const ButtonRenderContent = () => {
         if (deviceType === 'Windows') {
             return (
-                <a href={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
+                <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
                     <div className='absolute -top-[8px] -left-[8px] bg-[#2194ff] rounded-md font-allotrix-font-secondary text-[10px] px-[6px] py-0'>
                         BETA
                     </div>
                     Get For Windows
                     <FaWindows />
-                </a>
+                </Link>
             );
         } else if (deviceType === 'Mac') {
             return (
-                <a href={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
+                <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
                     <div className='absolute -top-[8px] -left-[8px] bg-[#2194ff] rounded-md font-allotrix-font-secondary text-[10px] px-[6px] py-0'>
                         BETA
                     </div>
                     Get For Mac
                     <FaApple />
-                </a>
+                </Link>
             );
         } else {
             return (
-                <a href={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
+                <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
                     Not available for this OS
-                </a>
+                </Link>
             );
         }
         
@@ -59,9 +59,9 @@ const Download = () => {
                         user ? (
                             ButtonRenderContent()
                         ) : (
-                            <a href={'/login'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
+                            <Link to={'/login'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm'>
                                 Login to download
-                            </a>
+                            </Link>
                         )
                     }
                 

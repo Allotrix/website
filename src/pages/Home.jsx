@@ -400,9 +400,9 @@ const Home = ({ setSelectedPlan }) => {
                         </div>
                         {
                             user ? (
-                                <a onClick={() => setSelectedPlan("Free")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' href={'/getAllotrix/download/payment'}>
+                                <Link onClick={() => setSelectedPlan("Free")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
                                     View Details
-                                </a>
+                                </Link>
                             ) : (
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
@@ -436,9 +436,9 @@ const Home = ({ setSelectedPlan }) => {
                         </div>
                         {
                             user ? (
-                                <a onClick={() => setSelectedPlan("Starter")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' href={'/getAllotrix/download/payment'}>
+                                <Link onClick={() => setSelectedPlan("Starter")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
                                     View Details
-                                </a>
+                                </Link>
                             ) : (
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
@@ -472,9 +472,9 @@ const Home = ({ setSelectedPlan }) => {
                         </div>
                         {
                             user ? (
-                                <a onClick={() => setSelectedPlan("Premium")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' href={'/getAllotrix/download/payment'}>
+                                <Link onClick={() => setSelectedPlan("Premium")} className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20' to={'/getAllotrix/download/payment'}>
                                     View Details
-                                </a>
+                                </Link>
                             ) : (
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
