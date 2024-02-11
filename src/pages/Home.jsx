@@ -147,7 +147,7 @@ const Home = ({ setSelectedPlan }) => {
                 </motion.article>
                 <aside className='flex flex-col gap-4 md:flex-row md:justify-center md:w-full'>
                     <motion.div {...animations.left} className='w-[290px] h-[256px] bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[300px]'>
-                    <video src={Gif} autoPlay muted loop controls={'false'}>
+                    <video src={Gif} autoPlay muted loop>
                         Your browser does not support the video.
                     </video>
                     </motion.div>
