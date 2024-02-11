@@ -133,7 +133,7 @@ const Home = ({ setSelectedPlan }) => {
                     <a href="mailto:allotrixapp@gmail.com?subject=Meeting%20Request" className='bg-transparent py-2 px-6 rounded-lg font-allotrix-font-secondary text-[white] border-[1px] md:text-lg border-solid border-allotrix-std'>Schedule a meeting</a>
                 </div>
                 <aside className='text-sm font-allotrix-font-secondary text-[gray] tracking-tighter z-20'>
-                    *contact us for getting personalized pricing
+                    *contact us for getting personalized <span><a className='underline' href='#pricing'>pricing</a></span>
                 </aside>
             </motion.section>
             <section id='milestones' className='flex flex-col items-center text-center mt-10 gap-10 md:items-start md:text-left md:px-32 md:gap-10'>
@@ -147,7 +147,7 @@ const Home = ({ setSelectedPlan }) => {
                 </motion.article>
                 <aside className='flex flex-col gap-4 md:flex-row md:justify-center md:w-full'>
                     <motion.div {...animations.left} className='w-[290px] h-[256px] bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[300px]'>
-                    <video src={Gif} autoPlay muted loop>
+                    <video src={Gif} autoPlay muted loop controls={'false'}>
                         Your browser does not support the video.
                     </video>
                     </motion.div>
@@ -163,7 +163,7 @@ const Home = ({ setSelectedPlan }) => {
                             </h5>
                         </motion.article>
                         <motion.article {...animations.right} transition={{ delay: 0.4}}>
-                            <a href={'/team'} className='w-[290px] h-[80px] grid items-center text-md md:text-lg text-center bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid border-allotrix-std'>
+                            <a href={'/team'} className='w-[290px] h-[80px] grid items-center text-md md:text-lg text-center bg-allotrix-std rounded-2xl lg:w-[400px] lg:h-[95px] border-[1px] border-solid text-allotrix-bg border-allotrix-std'>
                                 <h5 style={{ ...TextGradientStyle, ...GradientAnimations.right.animate }}>
                                     About the team
                                 </h5>
