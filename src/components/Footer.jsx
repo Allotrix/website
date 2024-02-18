@@ -38,16 +38,6 @@ const Footer = () => {
                             </Link>
                         </h3>
                         <ul className='text-sm'>
-                            <li>
-                                <a href="#milestones">
-                                    Milestones
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#clients">
-                                    Clients
-                                </a>
-                            </li>
                             {/* <li>
                                 <a href="/privacypolicy">
                                     Privacy Policy
