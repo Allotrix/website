@@ -18,6 +18,9 @@ import AuthState from './contexts/AuthContext';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
+import ProtectedPaymentRoute from './pages/ProtectedPaymentRoute';
+import ProtectedLoginRoute from './pages/ProtectedLoginRoute';
+import ProtectedSignupRoute from './pages/ProtectedSignupRoute';
 
 const App = () => {
 
@@ -37,9 +40,12 @@ const App = () => {
           <Route path='/getallotrix/otherProducts' element={<OtherProducts />} />
           <Route path='/updates' element={<Updates />} />
           <Route path='/team' element={<Team />} />
+          <Route path={'/getallotrix/download/payment'} element={<ProtectedPaymentRoute initialSelectedPlan={selectedPlan} onPlanChange={setSelectedPlan} />} />
           <Route path={'/getallotrix/download/payment'} element={<Payment initialSelectedPlan={selectedPlan} onPlanChange={setSelectedPlan} />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<ProtectedLoginRoute />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<ProtectedSignupRoute />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/termsofservice' element={<Terms />} />
           <Route path='/privacypolicy' element={<Privacy />} />
