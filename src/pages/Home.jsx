@@ -349,23 +349,23 @@ const Home = ({ setSelectedPlan }) => {
                 <div className='w-full blur-[150px] rounded-full h-32 absolute bg-allotrix-std -z-100 top-56' />
                 <div className='mt-14 px-4 sm:px-6 flex flex-col overflow-x-hidden overflow-visible'>
                 {
-                    [...Array(2)].map((arr, index) => (
-                        <div key={index} className={
+                    [...Array(2)].map((_, outerIndex) => (
+                        <div key={outerIndex} className={
                             twMerge(
                                 clsx('mt-10 flex flex-nowrap gap-6 self-start', {
-                                    'flex-row-reverse': index === 1,
+                                    'flex-row-reverse': outerIndex === 1,
                                     'animate-[slide_250s_linear_infinite]': true,
-                                    'animate-[slide_250s_linear_infinite_reverse]': index === 1,
-                                    'ml-[100vw]': index === 1
+                                    'animate-[slide_250s_linear_infinite_reverse]': outerIndex === 1,
+                                    'ml-[100vw]': outerIndex === 1
                                 }),
                                 'hover:paused'
                             )
-                            }>
-                                {
-                                    USERS.map((testimonial, index) => (
-                                        <TestimonialCard key={index} name={testimonial.name} designation={testimonial.designation}  message={testimonial.message} img={'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'} />
-                                    ))
-                                }
+                        }>
+                            {
+                                USERS.map((testimonial, innerIndex) => (
+                                    <TestimonialCard key={innerIndex} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'} />
+                                ))
+                            }
                         </div>
                     ))
                 }

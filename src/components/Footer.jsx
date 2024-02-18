@@ -49,8 +49,18 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#testimonials">
-                                Testimonials
+                                <a href="/privacypolicy">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/termsofservice">
+                                    Terms of Service
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/refundpolicy">
+                                    Refund Policy
                                 </a>
                             </li>
                         </ul>
