@@ -517,9 +517,9 @@ const Home = ({ setSelectedPlan }) => {
                     </motion.aside>
                 </div>
                 <div className='flex flex-col md:flex-row gap-6 md:w-full item-center justify-center md:justify-around'>
-                    <a href="/privacypolicy" className='font-allotrix-font-secondary text-center text-sm text-allotrix-text underline  md:text-md'>
+                    {/* <a href="/privacypolicy" className='font-allotrix-font-secondary text-center text-sm text-allotrix-text underline  md:text-md'>
                         Privacy Policy
-                    </a>
+                    </a> */}
                     <a href="/termsofservice" className='font-allotrix-font-secondary text-center text-sm text-allotrix-text underline  md:text-md'>
                         Terms of Service
                     </a>

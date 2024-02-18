@@ -52,7 +52,7 @@ const App = () => {
           <Route path='/signup' element={<ProtectedSignupRoute />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/termsofservice' element={<Terms />} />
-          <Route path='/privacypolicy' element={<Privacy />} />
+          {/* <Route path='/privacypolicy' element={<Privacy />} /> */}
           <Route path='/refundpolicy' element={<Refund />} />
         </Routes>
         <Footer />
