@@ -15,6 +15,9 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AuthState from './contexts/AuthContext';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Refund from './pages/Refund';
 
 const App = () => {
 
@@ -38,6 +41,9 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/termsofservice' element={<Terms />} />
+          <Route path='/privacypolicy' element={<Privacy />} />
+          <Route path='/refundpolicy' element={<Refund />} />
         </Routes>
         <Footer />
       </AuthState>
