@@ -511,7 +511,16 @@ const Home = ({ setSelectedPlan }) => {
                         </a>
                     </motion.aside>
                 </div>
-                <div className='md:self-end'>
+                <div className='flex flex-col md:flex-row gap-6 md:w-full item-center justify-center md:justify-around'>
+                    <a href="/getallotrix/otherProducts" className='font-allotrix-font-secondary text-center text-sm text-allotrix-text underline  md:text-md'>
+                        Privacy Policy
+                    </a>
+                    <a href="/getallotrix/otherProducts" className='font-allotrix-font-secondary text-center text-sm text-allotrix-text underline  md:text-md'>
+                        Terms of Service
+                    </a>
+                    <a href="/getallotrix/otherProducts" className='font-allotrix-font-secondary text-center text-sm text-allotrix-text underline  md:text-md'>
+                        Refund Policy
+                    </a>
                     <a href="/getallotrix/otherProducts" className='bg-allotrix-std py-2 px-6 rounded-lg font-allotrix-font-secondary text-[white] md:text-lg'>
                         View Other Products
                     </a>
