@@ -21,6 +21,10 @@ import Refund from './pages/Refund';
 import ProtectedPaymentRoute from './pages/ProtectedPaymentRoute';
 import ProtectedLoginRoute from './pages/ProtectedLoginRoute';
 import ProtectedSignupRoute from './pages/ProtectedSignupRoute';
+import ReactGA from 'react-ga';
+
+const MEASUREMENT_ID = 'G-RDCNBDLCL4';
+ReactGA.initialize(MEASUREMENT_ID);
 
 const App = () => {
 

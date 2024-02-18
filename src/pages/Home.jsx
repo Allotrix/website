@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { CLIENTS, FEATURES, USERS } from '../lib/constants';
 import { animate, motion } from 'framer-motion';
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
@@ -16,8 +16,13 @@ import TestimonialCard from '../components/TestimonialCard';
 import Popup from 'reactjs-popup';
 import { AuthContext } from '../contexts/AuthContext';
 import Alert from '../components/Alert';
+import ReactGA from 'react-ga';
 
 const Home = ({ setSelectedPlan }) => {
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, []);
 
     const context = useContext(AuthContext);
     const { user } = context;
