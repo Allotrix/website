@@ -171,43 +171,44 @@ export const PLAN_FEATURES = [
 
 export const USERS =  [
   {
-    "name": "Sarah R",
-    "designation": "MUN Fan",
-    "message": "Allotrix made my Model United Nations journey so much smoother! It's like having a helpful friend who knows exactly where you fit. The app's magic algorithm just gets me and my skills. Can't imagine doing MUN without it now!"
+    "name": "Muskan Naseema",
+    "designation": "Delegate, Dubai",
+    "message": "Allotrix made my MUN journey so much smoother! It's like having a helpful friend who knows exactly where you fit. The app's magic algorithm just gets me and my skills. Can't imagine getting a better country without it now!"
   },
   {
-    "name": "Michael S",
-    "designation": "MUN Explorer",
-    "message": "Allotrix surprised me in the best way during Model UN. It's like having a cool buddy who helps you out. The app's smart tricks not only made things easier but also fairer. It made my MUN experience way better!"
+    "name": "Habiba Elsaghir",
+    "designation": "EISJMUN, Dubai",
+    "message": "Allotrix surprised us in the best way during Model UN. It's like having a cool buddy who helps you out. The app's smart algorithm not only made things easier but also fairer. It made our allotment experience way better and efficient!"
   },
   {
-    "name": "Emily M",
-    "designation": "MUN Fan",
-    "message": "Allotrix is a must for MUN fans! It's like having a buddy who knows everyone's strengths. The app's special tricks make sure everyone gets a fair shot. Big thumbs up!"
+    "name": " Ana Maria",
+    "designation": " Galați MUN, Dubai",
+    "message": "The whole new concept of automation in MUN was very suspicious, but after adopting allotrix, we can say otherwise. We bought the premium edition of the program, and our staff enjoyed performing allotments with it. It's like having a pal who understands everyone's strengths. Big thumbs-up!"
   },
   {
-    "name": "James L",
-    "designation": "New MUN Fan",
-    "message": "Allotrix is a game-changer for Model United Nations. It's like having a friendly guide in the MUN world. The app's cool moves made my first-time experience so much better. It's like having a friend who just gets you!"
+    "name": "Farida Hacuzada",
+    "designation": "EMUN, Azerbaijan",
+    "message": "Allotrix is a game-changer for MUNs. The app's cool interface and algorithm made our DA experience so much better. We definitely recommend allotrix."
   },
   {
-    "name": "Rachel M",
-    "designation": "Event Organizer",
-    "message": "Allotrix was our reliable teammate during registration chaos, like a friend who has your back. The app's streamlined approach freed us to focus on creating an enjoyable event. Allotrix truly made our registration stress-free!"
+    "name": "Agnese D Ercole",
+    "designation": "FMUN, USA",
+    "message": "Allotrix was our reliable teammate during registration chaos. The app's streamlined approach freed us to focus on creating an enjoyable event. Allotrix truly made our registration stress-free!"
   },
   {
-    "name": "Jason H",
-    "designation": "Event Coordinator",
-    "message": "Allotrix, our secret weapon for smooth registration! Like a buddy stepping in when things get crazy. The app's user-friendly design simplified the process, making it feel like a collaborative effort. Allotrix made our organizing journey enjoyable."
+    "name": "Yasmeen Gharaibeh",
+    "designation": "BTBS MUN, Jakarta",
+    "message": "Allotrix stepped in when things got crazy. We were running short on time and had to release allotmemnts that were fair and good. The app's user-friendly design simplified the process, making it feel like a collaborative effort. Allotrix made our organizing journey enjoyable."
   },
   {
-    "name": "Maria G",
-    "designation": "Committee Organizer",
-    "message": "Allotrix brought order to our registration madness, like that friend who keeps things in check. The app's simplicity and automation not only saved time but brought a smile to our faces. Allotrix made organizing more humane and enjoyable."
+    "name": "?",
+    "designation": "?",
+    "message": "?"
   },
   {
-    "name": "Carlos S",
-    "designation": "Event Manager",
-    "message": "Allotrix, our event's unsung hero during registration. Like a wise mentor guiding through chaos. The app's seamless integration added a touch of humanity, making the process efficient and surprisingly enjoyable. Allotrix became the heart of our team!"
-  }
+    "name": "?",
+    "designation": "?",
+    "message": "?"
+  },
+ 
 ]
