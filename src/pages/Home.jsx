@@ -368,7 +368,7 @@ const Home = ({ setSelectedPlan }) => {
                         }>
                             {
                                 USERS.map((testimonial, innerIndex) => (
-                                    <TestimonialCard key={innerIndex} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'} />
+                                    <TestimonialCard key={innerIndex} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={testimonial.profile} />
                                 ))
                             }
                         </div>

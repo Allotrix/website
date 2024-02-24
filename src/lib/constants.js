@@ -172,43 +172,55 @@ export const PLAN_FEATURES = [
 export const USERS =  [
   {
     "name": "Muskan Naseema",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
     "designation": "Delegate, Dubai",
     "message": "Allotrix made my MUN journey so much smoother! It's like having a helpful friend who knows exactly where you fit. The app's magic algorithm just gets me and my skills. Can't imagine getting a better country without it now!"
   },
   {
     "name": "Habiba Elsaghir",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
     "designation": "EISJMUN, Dubai",
     "message": "Allotrix surprised us in the best way during Model UN. It's like having a cool buddy who helps you out. The app's smart algorithm not only made things easier but also fairer. It made our allotment experience way better and efficient!"
   },
   {
     "name": " Ana Maria",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
     "designation": " Galați MUN, Dubai",
     "message": "The whole new concept of automation in MUN was very suspicious, but after adopting allotrix, we can say otherwise. We bought the premium edition of the program, and our staff enjoyed performing allotments with it. It's like having a pal who understands everyone's strengths. Big thumbs-up!"
   },
   {
     "name": "Farida Hacuzada",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
+
     "designation": "EMUN, Azerbaijan",
     "message": "Allotrix is a game-changer for MUNs. The app's cool interface and algorithm made our DA experience so much better. We definitely recommend allotrix."
   },
   {
     "name": "Agnese D Ercole",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
+
     "designation": "FMUN, USA",
     "message": "Allotrix was our reliable teammate during registration chaos. The app's streamlined approach freed us to focus on creating an enjoyable event. Allotrix truly made our registration stress-free!"
   },
   {
     "name": "Yasmeen Gharaibeh",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
+
     "designation": "BTBS MUN, Jakarta",
     "message": "Allotrix stepped in when things got crazy. We were running short on time and had to release allotmemnts that were fair and good. The app's user-friendly design simplified the process, making it feel like a collaborative effort. Allotrix made our organizing journey enjoyable."
   },
   {
-    "name": "?",
-    "designation": "?",
-    "message": "?"
+    "name": "Neelabja Chakrabarty",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
+
+    "designation": "AIIMMUN, Nagpur",
+    "message": "Cool concept of automation. Feels like allotrix is going to revolutionize the way MUNs allotments are made."
   },
   {
-    "name": "?",
-    "designation": "?",
-    "message": "?"
+    "name": "Alyssa Sophia Opulencia",
+    "profile" : "'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'",
+    "designation": "Benilde Model United Nations, Philippines",
+    "message": "The automation was worth it. Can't wait to see AI being integrated in the app. I'd definitely recommend Allotrix"
   },
  
 ]
