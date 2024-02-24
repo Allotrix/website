@@ -28,7 +28,7 @@ const RefundPolicy = () => {
                   </li>
                 </ul>
                 <p>
-                  Time-Bound Request: Refund requests must be made within a thirty (3) day period following the date of purchase of the software.
+                  Time-Bound Request: Refund requests must be made within a three (3) day period following the date of purchase of the software.
                 </p>
               </li>
               <li>
@@ -77,7 +77,7 @@ const RefundPolicy = () => {
                 <h3 className='font-bold'>Exclusions from Refund Eligibility</h3>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    Expiry of Refund Period: Services purchased more than thirty (4) days prior are not eligible for a refund.
+                    Expiry of Refund Period: Services purchased more than three (3) days prior are not eligible for a refund.
                   </li>
                   <li className='ml-4'>
                     Misuse or Unauthorised Use: Claims arising from misuse, unauthorized use, or alteration of the software by the customer.
