@@ -375,6 +375,20 @@ const Home = ({ setSelectedPlan }) => {
                     ))
                 }
                 </div>
+                {/* <div className='w-full md:w-[75%] overflow-hidden flex after:content[""] after:dark:from-brand-dark after:from-background after:bg-gradient-to-l after:right-0 after:top-0 after:bottom-0 after:w-20 after:z-10 after:absolute before:content[""] before:dark:from-brand-dark before:from-background before:bg-gradient-to-r before:left-0 before:top-0 before:bottom-0 before:w-20 before:z-10 before:absolute'>
+                    {
+                        
+                        [...Array(2)].map((arr, i) => (
+                            <div key={i} className='flex flex-nowrap gap-4 animate-slide-testimonials'>
+                                {
+                                    USERS.map((testimonial, innerIndex) => (
+                                        <TestimonialCard key={innerIndex} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={testimonial.profile} />
+                                    ))
+                                }
+                            </div>
+                        ))
+                    }
+                </div> */}
             </motion.section>
             <section id='pricing' className='flex flex-col items-center gap-10 md:items-start md:text-left md:px-32 md:gap-10 mb-24 relative'>
                 <div className='w-full'>

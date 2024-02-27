@@ -12,20 +12,16 @@
   animation: 15s slide linear infinite;
 }
 
+.animate-slide-testimonials {
+  animation: 25s slide linear infinite;
+}
+
 @keyframes slide {
   from {
     transform: translateX(0);
   } to {
     transform: translateX(-100%);
   }
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    } to {
-        transform: translateX(-100%);
-    }
 }
 
 .main-section {
