@@ -19,7 +19,7 @@ const Login = () => {
                     <p className='md:w-[330px] px-4 md:px-[unset]'>
                         Allotrix simplifies your allotments, emails, re-allotments, and more! A click of a button is all it takes
                     </p>
-                    <a href='https://www.youtube.com/@Allotrix' target='blank' className='flex gap-2 w-[190px] items-center font-bold text-[white] justify-center bg-allotrix-std rounded-md py-2 px-4 mx-auto md:mx-[unset]'>
+                    <a href='https://youtu.be/6Cc5fL5oJm4?si=tRdxsO9AR4MiFrhx' target='blank' className='flex gap-2 w-[190px] items-center font-bold text-[white] justify-center bg-allotrix-std rounded-md py-2 px-4 mx-auto md:mx-[unset]'>
                         Visualize Allotrix 
                         <p className='font-extrabold'>
                             <MdOutlineArrowOutward />
