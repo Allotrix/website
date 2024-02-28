@@ -83,7 +83,6 @@ const Contact = () => {
                         </a>
                     </aside>
                 </article>
-                
             </section>
         </main>
     )
