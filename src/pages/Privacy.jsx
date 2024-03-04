@@ -2,7 +2,7 @@ import React from 'react';
 
 const Privacy = () => {
   return (
-    <section className='bg-allotrix-bg text-allotrix-text flex flex-col items-center py-24 md:mt-0 text-center gap-10 md:items-start md:text-left md:px-32 md:gap-4 md:pt-48'>
+    <section className='bg-allotrix-bg text-allotrix-text flex flex-col items-center py-24 md:mt-0 px-6 gap-10 md:items-start text-left md:px-32 md:gap-4 md:pt-48'>
         <div className='font-allotrix-font-secondary w-full text-center mt-16 md:mt-0'>
             <h1 className='font-bold text-3xl md:text-4xl md:mb-10 px-2'>
                 Privacy Policy
@@ -10,106 +10,90 @@ const Privacy = () => {
         </div>
         <div className='md:w-[750px] mx-auto font-allotrix-font-secondary flex flex-col gap-6'>
             <p>
-              To assist you in drafting a Privacy Policy for your business, I'll need to gather some additional information about how your business handles user data. Here are some key questions to consider:
+              Welcome to Allotrix. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at <a href="mailto:allotrixapp@gmail.com" className="text-blue-500">allotrixapp@gmail.com</a>.
+            </p>
+            <p>
+              When you visit our website <a href="http://www.allotrix.com" className="text-blue-500">www.allotrix.com</a> (the "Website"), and more generally, use any of our services (the "Services," which include the Website), we appreciate that you are trusting us with your personal information. We take your privacy very seriously. In this privacy notice, we seek to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it. We hope you take some time to read through it carefully, as it is important. If there are any terms in this privacy policy that you do not agree with, please discontinue use of our Services immediately.
             </p>
             <ol className='flex flex-col gap-4 list-decimal pl-4'>
               <li>
-                Data Collection:
+                <strong>What Information Do We Collect?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    we collect personal information, their registration preferences, their identity proofs documents and payment screenshots. We can also see if the organisation using our product chooses to get more information from their participants
+                    We collect personal information that you voluntarily provide to us when you register on the Website, express an interest in obtaining information about us or our products and Services, when you participate in activities on the Website, or otherwise when you contact us.
+                  </li>
+                  <li className='ml-4'>
+                    The personal information that we collect depends on the context of your interactions with us and the Website, the choices you make, and the products and features you use. The personal information we collect may include the following:
+                    <ul className="list-disc ml-6">
+                      <li>Personal Information: Full name, email address, and other similar information.</li>
+                      <li>Documents: Identity proof documents and payment screenshots.</li>
+                      <li>Preferences: Registration preferences and profile pictures.</li>
+                    </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                Data Use:
+                <strong>How Do We Use Your Information?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    we use this data, primarily, to automate the organization’s allotments. We also use the collected data to target our sales emails and updates. The user is however allowed to cancel this email targeting by clicking on “unsubscribe”
+                    We use personal information collected via our Website for a variety of business purposes described below:
+                    <ul className="list-disc ml-6">
+                      <li>To facilitate account creation and the logon process.</li>
+                      <li>To send administrative information to you, sales emails, and updates. You may opt-out of receiving these communications from us by clicking on the unsubscribe link or following the instructions provided in any email we send.</li>
+                      <li>To enforce our terms, conditions, and policies for business purposes, to comply with legal and regulatory requirements, or in connection with our contract.</li>
+                      <li>To respond to legal requests and prevent harm.</li>
+                    </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                Data Sharing:
+                <strong>Will Your Information Be Shared With Anyone?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    We do not share user data with any third parties (e.g., partners, affiliates)?
+                    We do not share your personal information with third parties, partners, or affiliates. Your information is used solely for the purposes outlined in this policy and within our organization to help improve our Services.
                   </li>
                 </ul>
               </li>
               <li>
-                User Consent:
+                <strong>How Long Do We Keep Your Information?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    at the end of google forms there is a consent field where they have to agree inorder for their data to get automated by our platform
-                  </li>
-                  <li className='ml-4'>
-                    yes the user can opt out from this anytime
+                    We will keep your personal information for as long as it is necessary for the purposes set out in this privacy policy, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).
                   </li>
                 </ul>
               </li>
               <li>
-                Data Storage and Security:
+                <strong>How Do We Keep Your Information Safe?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    the storage of the data is handled by the organization. We only have access to it. We, however store a part of their data like email, full name, profile pic in our database.
-                  </li>
-                  <li className='ml-4'>
-                    we do not store sensitive data, but as long as their password is concerned, it is encrypted.
+                    We aim to protect your personal information through a system of organizational and technical security measures. We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information.
                   </li>
                 </ul>
               </li>
               <li>
-                Data Retention:
+                <strong>Do We Collect Information From Minors?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    user data is retained as long as they opt out
-                  </li>
-                  <li className='ml-4'>
-                    Is there a policy for data deletion upon user request or after a certain period? YES
+                    We do not knowingly collect data from or market to children under 13 years of age. Our website is designed to be child-safe and does not display content that could be harmful to minors.
                   </li>
                 </ul>
               </li>
               <li>
-                Children's Privacy:
+                <strong>What Are Your Privacy Rights?</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    Does your website cater to children under a certain age? (e.g., under 13 years) YES
+                    In some regions, such as the European Economic Area, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time.
                   </li>
                   <li className='ml-4'>
-                    Our website is child safe, we do not show anything that might possibly affect a minor.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                User Rights:
-                <ul className='list-disc'>
-                  <li className='ml-4'>
-                    What rights do users have regarding their data? (e.g., right to access, right to delete, right to correct information) The rights are only given to the organizatiion that is using our product
+                    If you have questions or comments about your privacy rights, you may email us at <a href="mailto:allotrixapp@gmail.com" className="text-blue-500">allotrixapp@gmail.com</a>.
                   </li>
                 </ul>
               </li>
               <li>
-                Cross-Border Data Transfer:
+                <strong>Controls for Do-Not-Track Features</strong>
                 <ul className='list-disc'>
                   <li className='ml-4'>
-                    We do not transfer any data.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Policy Updates:
-                <ul className='list-disc'>
-                  <li className='ml-4'>
-                    They will receive an email
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Contact Information:
-                <ul className='list-disc'>
-                  <li className='ml-4'>
-                    What is the contact information if users have privacy-related questions or concerns? the email allotrixapp@gmail.com
+                    Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing.
                   </li>
                 </ul>
               </li>

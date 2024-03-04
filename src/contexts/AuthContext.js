@@ -69,8 +69,6 @@ const AuthState = ({children}) => {
 
             const result = await createUserWithEmailAndPassword(auth, createUser.email, createUser.password);
             setUser(result);
-            console.log(result);
-            console.log(user);
 
             // Updating account Name
             const userName = result.user;

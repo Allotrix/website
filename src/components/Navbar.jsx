@@ -50,7 +50,7 @@ const Navbar = ({openNav, setOpenNav}) => {
                                     (close) => (
                                         <aside className='rounded-md bg-[#161616] w-[100px] text-allotrix-text border border-solid border-allotrix-std flex flex-col items-center p-2 gap-2'>
                                             <p className='font-allotrix-font-secondary'>
-                                                {user.displayName.split(' ')[0]}
+                                                {user.displayName?.split(' ')[0]}
                                             </p>
                                             {/* <button className='hover:bg-allotrix-std w-full'>
                                                 Dashboard
