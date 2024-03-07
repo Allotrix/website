@@ -185,7 +185,7 @@ export const USERS =  [
   {
     "name": " Ana Maria",
     "profile" : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png',
-    "designation": " Galați MUN, Dubai",
+    "designation": " Galați MUN, Romania",
     "message": "The whole new concept of automation in MUN was very suspicious, but after adopting allotrix, we can say otherwise. We bought the premium edition of the program, and our staff enjoyed performing allotments with it. It's like having a pal who understands everyone's strengths. Big thumbs-up!"
   },
   {
