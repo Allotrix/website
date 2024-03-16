@@ -44,7 +44,7 @@ const Navbar = ({openNav, setOpenNav}) => {
                     user ? (
                         <div className='text-allotrix-bg border-[1px] h-[50px] rounded-full w-[50px] border-solid border-allotrix-std bg-allotrix-text text-2xl'>
                             <Popup trigger={<button className='rounded-full h-full w-full flex items-center justify-center'>
-                                <img className='max-h-full max-w-full rounded-full' src={user.photoURL ? user.photoURL : "https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"} alt="AV" />
+                                <img className='max-h-full max-w-full rounded-full' src={user.photoURL} alt="AV" />
                             </button>}>
                                 {
                                     (close) => (

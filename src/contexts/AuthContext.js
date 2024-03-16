@@ -26,20 +26,21 @@ const AuthState = ({children}) => {
         try {
 
             const result = await signInWithPopup(auth, provider);
-            setUser(result);
 
             // POST to email_list collection
-            await setDoc(doc(db, 'email_list', user.uid), {
+            await setDoc(doc(db, 'email_list', result.user.uid), {
                 email: result.user.email
             });
 
             // POST to user_data collection
-            await setDoc(doc(db, 'user_data', user.uid), {
+            await setDoc(doc(db, 'user_data', result.user.uid), {
                 name: result.user.displayName,
                 email: result.user.email,
                 photo: result.user.photoURL,
                 createdAt: serverTimestamp()
             });
+
+            setUser(result.user);
 
             // Navigate page
             navigate('/');
@@ -68,24 +69,27 @@ const AuthState = ({children}) => {
         try {
 
             const result = await createUserWithEmailAndPassword(auth, createUser.email, createUser.password);
-            setUser(result);
+            const editUser = result.user;
 
-            // Updating account Name
-            const userName = result.user;
-            await updateProfile(userName, { displayName: createUser.name });
-
+            await updateProfile(editUser, {
+                displayName: createUser.name,
+                photoURL: "https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"
+            });
 
             // POST to email_list collection
-            await setDoc(doc(db, 'email_list', user.uid), {
-                email: createUser.email
+            await setDoc(doc(db, 'email_list', editUser.uid), {
+                email: editUser.email
             });
 
             // POST to user_data collection
-            await setDoc(doc(db, 'user_data', user.uid), {
-                name: createUser.name,
-                email: createUser.email,
+            await setDoc(doc(db, 'user_data', editUser.uid), {
+                name: editUser.name,
+                email: editUser.email,
+                photo: editUser.phoneNumber,
                 createdAt: serverTimestamp()
             });
+
+            setUser(editUser);
 
             // Reset Signup Form 
             setNewUser({ name: "", email: "", password: "" });
