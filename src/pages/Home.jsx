@@ -10,8 +10,6 @@ import Logo from '../assets/logo.png';
 import Gif from '../assets/allotrix-gif.mp4';
 import { Link } from 'react-router-dom';
 import Accordion from '../components/Accordion';
-import { twMerge } from 'tailwind-merge';
-import clsx from 'clsx';
 import TestimonialCard from '../components/TestimonialCard';
 import Popup from 'reactjs-popup';
 import { AuthContext } from '../contexts/AuthContext';

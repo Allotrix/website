@@ -1,23 +1,30 @@
 import React, { useContext } from 'react';
 import { FaWindows, FaApple } from "react-icons/fa";
 import { getDeviceType } from '../Utility/OSfinder';  
-import { twMerge } from 'tailwind-merge';
-import clsx from 'clsx';
 import TestimonialCard from '../components/TestimonialCard';
 import { USERS } from '../lib/constants';
 import { AuthContext } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import LinkBox from '../components/LinkBox';
 
-
 const Download = () => {
 
     const context = useContext(AuthContext);
     const { user } = context;
 
+    const settings = {
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        speed: 500
+    };
+
     const deviceType = getDeviceType();
 
     const ButtonRenderContent = () => {
+
         if (deviceType === 'Windows') {
             return (
                 <Link to={'/getallotrix/download/payment'} className='flex gap-2 items-center bg-allotrix-std py-4 px-10 rounded-md font-bold text-sm relative'>
@@ -86,29 +93,6 @@ const Download = () => {
                 </div>
                 <section className='relative'>
                     <div className='w-full blur-[150px] rounded-full h-32 absolute bg-allotrix-std -z-100 top-56' />
-                    {/* <div className='mt-14 px-4 sm:px-6 flex flex-col overflow-x-hidden overflow-visible'>
-                        {
-                            [...Array(2)].map((arr, index) => (
-                                <div key={index} className={
-                                    twMerge(
-                                        clsx('mt-10 flex flex-nowrap gap-6 self-start', {
-                                            'flex-row-reverse': index === 1,
-                                            'animate-[slide_250s_linear_infinite]': true,
-                                            'animate-[slide_250s_linear_infinite_reverse]': index === 1,
-                                            'ml-[100vw]': index === 1
-                                        }),
-                                        'hover:paused'
-                                    )
-                                    }>
-                                        {
-                                            USERS.map((testimonial, index) => (
-                                                <TestimonialCard key={index} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png'} />
-                                            ))
-                                        }
-                                </div>
-                            ))
-                        }
-                    </div> */}
                     <div className='overflow-hidden flex after:content[""] after:dark:from-brand-dark after:from-background after:bg-gradient-to-l after:right-0 after:top-0 after:bottom-0 after:w-20 after:z-10 after:absolute before:content[""] before:dark:from-brand-dark before:from-background before:bg-gradient-to-r before:left-0 before:top-0 before:bottom-0 before:w-20 before:z-10 before:absolute'>
                         {
                             
