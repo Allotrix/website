@@ -352,28 +352,60 @@ const Home = ({ setSelectedPlan }) => {
                     </h2>
                 </div>
                 <div className='w-full blur-[150px] rounded-full h-32 absolute bg-allotrix-std -z-100 top-56' />
-                <div className='mt-14 px-4 sm:px-6 flex flex-col overflow-x-hidden overflow-visible'>
-                {
-                    [...Array(2)].map((arr, outerIndex) => (
-                        <div key={outerIndex} className={
-                            twMerge(
-                                clsx('mt-10 flex flex-nowrap gap-6 self-start', {
-                                    'flex-row-reverse': outerIndex === 1,
-                                    'animate-[slide_250s_linear_infinite]': true,
-                                    'animate-[slide_250s_linear_infinite_reverse]': outerIndex === 1,
-                                    'ml-[100vw]': outerIndex === 1
-                                }),
-                                'hover:paused'
-                            )
-                        }>
-                            {
-                                USERS.map((testimonial, innerIndex) => (
-                                    <TestimonialCard key={innerIndex} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={testimonial.profile} />
-                                ))
-                            }
-                        </div>
-                    ))
-                }
+                {/* <div className='mt-14 px-4 sm:px-6 flex flex-col overflow-x-hidden overflow-visible'>
+                    {
+                        [...Array(2)].map((arr, outerIndex) => (
+                            <div key={outerIndex} className={
+                                twMerge(
+                                    clsx('mt-10 flex flex-nowrap gap-6 self-start', {
+                                        'flex-row-reverse': outerIndex === 1,
+                                        'animate-[slide_250s_linear_infinite]': true,
+                                        'animate-[slide_250s_linear_infinite_reverse]': outerIndex === 1,
+                                        'ml-[100vw]': outerIndex === 1
+                                    }),
+                                    'hover:paused'
+                                )
+                            }>
+                                {
+                                    USERS.map((testimonial, innerIndex) => (
+                                        <TestimonialCard key={innerIndex} name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={testimonial.profile} />
+                                    ))
+                                }
+                            </div>
+                        ))
+                    }
+                </div> */}
+                <div className='overflow-hidden flex after:content[""] after:dark:from-brand-dark after:from-background after:bg-gradient-to-l after:right-0 after:top-0 after:bottom-0 after:w-20 after:z-10 after:absolute before:content[""] before:dark:from-brand-dark before:from-background before:bg-gradient-to-r before:left-0 before:top-0 before:bottom-0 before:w-20 before:z-10 before:absolute'>
+                    {
+                        
+                        [...Array(2)].map((arr) => (
+                            <div key={arr} className='flex flex-nowrap animate-[slide_200s_linear_infinite]'>
+                                {
+                                    USERS.map((testimonial, index) => (
+                                        <div key={index} className='relative mt-14 mx-3 shrink-0 flex items-center'>
+                                            <TestimonialCard name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={testimonial.profile} />
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        ))
+                    }
+                </div>
+                <div className='overflow-hidden flex after:content[""] after:dark:from-brand-dark after:from-background after:bg-gradient-to-l after:right-0 after:top-0 after:bottom-0 after:w-20 after:z-10 after:absolute before:content[""] before:dark:from-brand-dark before:from-background before:bg-gradient-to-r before:left-0 before:top-0 before:bottom-0 before:w-20 before:z-10 before:absolute'>
+                    {
+                        
+                        [...Array(2)].map((arr) => (
+                            <div key={arr} className='flex flex-nowrap animate-[slide_200s_linear_infinite_reverse]'>
+                                {
+                                    USERS.map((testimonial, index) => (
+                                        <div key={index} className='relative mt-10 mx-3 shrink-0 flex items-center'>
+                                            <TestimonialCard name={testimonial.name} designation={testimonial.designation} message={testimonial.message} img={testimonial.profile} />
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        ))
+                    }
                 </div>
             </motion.section>
             <section id='pricing' className='flex flex-col items-center gap-10 md:items-start md:text-left md:px-32 md:gap-10 mb-24 relative'>
