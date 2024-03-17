@@ -22,6 +22,7 @@ import ProtectedPaymentRoute from './pages/ProtectedPaymentRoute';
 import ProtectedLoginRoute from './pages/ProtectedLoginRoute';
 import ProtectedSignupRoute from './pages/ProtectedSignupRoute';
 import ReactGA from 'react-ga';
+import Reallotment from './pages/Reallotment';
 
 const MEASUREMENT_ID = 'G-RDCNBDLCL4';
 ReactGA.initialize(MEASUREMENT_ID);
@@ -54,6 +55,7 @@ const App = () => {
           <Route path='/termsofservice' element={<Terms />} />
           <Route path='/privacypolicy' element={<Privacy />} />
           <Route path='/refundpolicy' element={<Refund />} />
+          <Route path='/reallotment' element={<Reallotment />} />
         </Routes>
         <Footer />
       </AuthState>

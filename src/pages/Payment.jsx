@@ -52,7 +52,7 @@ const Payment = ({ initialSelectedPlan, onPlanChange }) => {
                     <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std font-allotrix-font-secondary px-12 py-2 rounded-md'>Pay</button>} modal nested>
                         {
                             (close) => (
-                                <Alert message={"The payment gateway is under construction. Contact us to get Allotrix."} onclick = {() => close()} />
+                                <Alert sign={false} title={"Under Construction"} message={"The payment gateway is under construction. Contact us to get Allotrix."} onclick = {() => close()} />
                             )
                         }
                     </Popup>

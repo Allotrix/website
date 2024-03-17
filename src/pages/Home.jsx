@@ -442,7 +442,7 @@ const Home = ({ setSelectedPlan }) => {
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
                                         (close) => (
-                                            <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
+                                            <Alert sign={false} title={"Login required"} message={"Login to your account to download Allotrix"} onclick = {() => close()} />
                                         )
                                     }
                                 </Popup>
@@ -478,7 +478,7 @@ const Home = ({ setSelectedPlan }) => {
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
                                         (close) => (
-                                            <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
+                                            <Alert sign={false} title={"Login required"} message={"Login to your account to download Allotrix"} onclick = {() => close()} />
                                         )
                                     }
                                 </Popup>
@@ -514,7 +514,7 @@ const Home = ({ setSelectedPlan }) => {
                                 <Popup overlayStyle={{background: 'rgba(0, 0, 0, .5)'}} trigger={<button className='bg-allotrix-std rounded-md px-6 py-2 mx-auto mt-20'>View Details</button>} modal nested>
                                     {
                                         (close) => (
-                                            <Alert message={"Login to your account to download Allotrix"} onclick = {() => close()} />
+                                            <Alert sign={false} title={"Login required"} message={"Login to your account to download Allotrix"} onclick = {() => close()} />
                                         )
                                     }
                                 </Popup>
